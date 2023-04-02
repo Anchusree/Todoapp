@@ -92,23 +92,40 @@ i{
     display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;align-items:center
 }
 .container{
-    width:30%;float:left;margin-top:2.5%;margin-left:2.5%;padding-top:1rem;padding-bottom:1rem;-webkit-flex-direction:column;
+    width:20%;
+    float:left;
+    margin-top:2.5%;
+    margin-left:2.5%;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    -webkit-flex-direction:column;
     flex-direction:column
 }
 .container,.container .toDo{
-    height:100%;border-radius:.25rem
+    height:100%;
+    border-radius:.25rem
 }
 .container .toDo{
-    width:92%;background-color:hsla(0,0%,94.5%,.2);margin-top:.5rem;padding:5px;transition:width .2s
+    width:92%;
+    background-color:hsla(0,0%,94.5%,.2);
+    margin-top:.5rem;
+    padding:5px;
+    transition:width .2s
 }
 .container .toDo:hover{
-    background-color:hsla(0,0%,94.5%,.313);width:95%
+    background-color:hsla(0,0%,94.5%,.313);
+    width:95%
 }
 .container .toDo .top p{
-    word-wrap:break-word;text-align:justify;font-size:large;font-weight:700;cursor:default
+    word-wrap:break-word;
+    text-align:justify;
+    font-size:large;
+    font-weight:700;
+    cursor:default
 }
 .container .toDo .bottom p{
-    font-size:small;cursor:default
+    font-size:small;
+    cursor:default
 }
 .container.done{
     background-color:#2e8b57;box-shadow:0 0 2px 2px #2e8b57
@@ -117,7 +134,7 @@ i{
     display:grid;grid-template-columns:auto auto auto;grid-template-rows:auto auto
 }
 .container.done .toDo .top{
-    width:25.5vw
+    width:15.5vw
 }
 .container.done .toDo .left{
     grid-column-start:1;grid-column-end:2;grid-row-start:1;grid-row-end:3
@@ -126,19 +143,29 @@ i{
     grid-column-start:3;grid-column-end:4;grid-row-start:1;grid-row-end:3
 }
 .container.onGoing{
-    background-color:#b8860b;box-shadow:0 0 2px 2px #b8860b
+    background-color:#b8860b;
+    box-shadow:0 0 2px 2px #b8860b
 }
 .container.onGoing .toDo{
-    display:grid;grid-template-columns:auto auto auto;grid-template-rows:auto auto
+    display:grid;
+    grid-template-columns:auto auto auto;
+    grid-template-rows:auto auto
 }
 .container.onGoing .toDo .top{
-    width:24vw
+    /* width:20vw */
+    width:15.5vw
 }
 .container.onGoing .toDo .left{
-    grid-column-start:1;grid-column-end:2;grid-row-start:1;grid-row-end:3
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start:1;
+    grid-row-end:3
 }
 .container.onGoing .toDo .right{
-    grid-column-start:3;grid-column-end:4;grid-row-start:1;grid-row-end:3
+    grid-column-start:3;
+    grid-column-end:4;
+    grid-row-start:1;
+    grid-row-end:3
 }
 .container.dropped{
     background-color:brown;box-shadow:0 0 2px 2px brown
@@ -147,7 +174,8 @@ i{
     display:grid;grid-template-columns:auto auto auto;grid-template-rows:auto auto
 }
 .container.dropped .toDo .top{
-    width:23.5vw
+    /* width:20.5vw */
+    width:15.5vw
 }
 .container.dropped .toDo .left{
     grid-column-start:1;grid-column-end:2;grid-row-start:1;grid-row-end:3
@@ -156,18 +184,39 @@ i{
     grid-column-start:3;grid-column-end:4;grid-row-start:1;grid-row-end:3
 }
 
+.container.important{
+    background-color: rgb(12 120 168);
+    box-shadow: 0 0 2px 2px rgb(12 120 168);
+}
+
+.container.important .toDo{
+    display:grid;grid-template-columns:auto auto auto;grid-template-rows:auto auto
+}
+.container.important .toDo .top{
+    /* width:20.5vw */
+    width:15.5vw
+}
+.container.important .toDo .left{
+    grid-column-start:1;grid-column-end:2;grid-row-start:1;grid-row-end:3
+}
+.container.important .toDo .right{
+    grid-column-start:3;grid-column-end:4;grid-row-start:1;grid-row-end:3
+}
+   
+
 @media only screen and (max-width:950px) and (min-width:430px){
     .container.done .toDo .top{
-        width:23vw
+        width:14vw
     }
     .container.onGoing .toDo .bottom,.container.onGoing .toDo .top{
-        width:18.5vw;margin-left:1vw
+        width:14vw;margin-left:1vw
     }
     .container.dropped .toDo .top{
-        width:19vw;margin-left:1vw
+        width:14w;
+        margin-left:-2vw
     }
     .container.dropped .toDo .bottom{
-        margin-left:1vw
+        margin-left:-1vw
     }}
     @media only screen and (max-width:800px){
         .toDoInput{width:95%}}@media only screen and (max-width:430px){
