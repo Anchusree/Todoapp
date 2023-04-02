@@ -8,14 +8,14 @@ import ImportantTask from './ImportantTask';
 
 function App() {
 
-  const [list, setList] = useState([{ id: 1, text: "Reading", status: false }])
+  const [list, setList] = useState([{ id: 1, text: "Reading"}])
   const [todo, setTodo] = useState('')
   const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-  const [completed, setCompleted] = useState([{ id: 2, text: "Travelling", status: false }])
-  const [drop, setDrop] = useState([{ id: 1, text: "Cooking", status: false }])
+  const [completed, setCompleted] = useState([{ id: 2, text: "Travelling" }])
+  const [drop, setDrop] = useState([{ id: 1, text: "Cooking"}])
 
-  const [important, setImportant] = useState([{ id: 3, text: "Assignment", status: false }])
+  const [important, setImportant] = useState([{ id: 3, text: "Assignment"}])
 
   return (
     <div className="App">
